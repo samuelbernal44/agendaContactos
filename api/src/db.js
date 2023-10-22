@@ -7,8 +7,8 @@ const mongoDBUrl = 'mongodb://127.0.0.1:27017/contacts';
 mongoose
   .connect(mongoDBUrl, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
-    console.log('Conexión exitosa a MongoDB');
+    console.log('Successful connection to MongoDB');
   })
   .catch((error) => {
-    console.error('Error de conexión a MongoDB:', error);
+    console.error('MongoDB connection failed:', error);
   });
