@@ -6,6 +6,7 @@ const {
   putContactHandler,
   deleteContactHandler,
 } = require('../handlers/contactsHandler');
+const postContactValidate = require('../middlewares/postContactValidate');
 
 const contactsRouter = Router();
 
@@ -13,7 +14,7 @@ contactsRouter.get('/', getAllContactsHandler);
 
 contactsRouter.get('/:id', getContactByIdHandler);
 
-contactsRouter.post('/', postContactHandler);
+contactsRouter.post('/', postContactValidate, postContactHandler);
 
 contactsRouter.put('/:id', putContactHandler);
 
