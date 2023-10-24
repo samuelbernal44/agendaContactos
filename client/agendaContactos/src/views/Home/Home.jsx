@@ -1,7 +1,9 @@
-const Home = () => {
+import ContactsContainer from '../../components/ContactsContainer/ContactsContainer';
+
+const Home = ({ data }) => {
   return (
     <>
-      <h1>Esta es la vista de Home</h1>
+      <ContactsContainer data={data} />
     </>
   );
 };
